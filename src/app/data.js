@@ -11,6 +11,8 @@ export const SiteConfig = {
   linkedin: "https://www.linkedin.com/in/hadi-ali-2253a8277/",
   resume: "/Hadi_Ali_Resume.pdf",
   yearsExperience: "2+",
+  projectsCount: "50+",
+  screensCount: "600+",
   // hero portrait, e.g. "/profile.png" in /public (a cut-out PNG with transparent background looks best).
   // Leave null to show the project collage instead.
   photo: null,

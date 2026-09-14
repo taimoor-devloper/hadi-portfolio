@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { hind } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import { AboutData, SiteConfig } from "@/app/data";
 import Image from "next/image";
 
@@ -45,21 +45,21 @@ export default function AboutMe() {
     <React.Fragment>
       <div
         id="about-me-component"
-        className="bg-[#E0F3FD] pt-[250px] mt-4  pb-[100px] lg:pb-[600px] relative lg:h-[800px]"
+        className="scroll-mt-24 bg-[#E8EEFB] pt-[250px] mt-4  pb-[100px] lg:pb-[600px] relative lg:h-[800px]"
       >
         <div className="container m-auto">
-          <h1 className="text-[240px] w-[80%] overflow-hidden absolute lg:left-40 md:left-30 top-[-50px]  text-[#EAF7FC]">
+          <h1 className="text-[240px] w-[80%] overflow-hidden absolute lg:left-40 md:left-30 top-[-50px]  text-[#EEF3FD]">
             About Me
           </h1>
-          <h1 className="relative font-recoletaBlack text-5xl  text-[#48AFDE] mb-5 -mt-40  md:px-24 px-5">
+          <h1 className="relative font-extrabold text-5xl  text-[#1D4ED8] mb-5 -mt-40  md:px-24 px-5">
             About My Self
           </h1>
-          <h4 className="relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-recoleta text-[#223740] text-2xl mb-10 px-5 md:px-24">
+          <h4 className="relative w-full font-[300] md:w-3/4 lg:w-2/3 xl:w-1/2 font-semibold text-[#0B1D3A] text-2xl mb-10 px-5 md:px-24">
             Designing interfaces people enjoy using — and teams can build
           </h4>
           <section className="relative flex flex-col lg:flex-row px-5 md:px-24">
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#0B1D3A] mr-0 mb-5  lg:mr-4 font-[200] ${sans.className}`}
             >
               My name is {SiteConfig.name}, a {SiteConfig.role} based in{" "}
               {SiteConfig.location}. I design web apps, mobile apps, landing
@@ -67,7 +67,7 @@ export default function AboutMe() {
               TCS Sentiments, Bluebird Art Paint, SOGO Store, and Autojin Parts.
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#0B1D3A] mr-0 mb-5  lg:mr-4 font-[200] ${sans.className}`}
             >
               Currently, I'm also working on management systems for US-based
               brands such as Wilbarts, BYOT Auto Parts, and Nivago Pick-A-Part —
@@ -75,7 +75,7 @@ export default function AboutMe() {
               tracking into clear, efficient interfaces.
             </p>
             <p
-              className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5  lg:mr-4 font-[200] ${hind.className}`}
+              className={`w-full lg:w-1/3 text-[#0B1D3A] mr-0 mb-5  lg:mr-4 font-[200] ${sans.className}`}
             >
               Due to company policies, I can't share links to some of my
               current projects, but I'd be happy to schedule a short meeting
@@ -88,7 +88,7 @@ export default function AboutMe() {
 
       <div
         style={{
-          backgroundImage: "linear-gradient(45deg, #EAF7FC  70%,#48AFDE 30%)",
+          backgroundImage: "linear-gradient(45deg, #EEF3FD  70%,#1D4ED8 30%)",
           width: "100%",
         }}
         className="lg:-mt-60"
@@ -99,11 +99,11 @@ export default function AboutMe() {
               {AboutData.map((item, index) => (
                 <a key={index}
                   onClick={() => handleCardClick(item, index)}
-                  style={{ boxShadow: "#48AFDE -5px  10px 20px 0px" }}
+                  style={{ boxShadow: "0 12px 32px -12px rgba(11, 29, 58, 0.18)" }}
                   className={`relative cursor-pointer transition-all transform duration-300 group rounded-xl center p-6 lg:p-10 flex flex-col justify-center  items-center ${
                     selectedIndex == index
-                      ? " -translate-y-2 bg-[#476571]"
-                      : "hover:bg-[#476571] hover:shadow-xl hover:-translate-y-2 bg-white"
+                      ? " -translate-y-2 bg-[#1E3A8A]"
+                      : "hover:bg-[#1E3A8A] hover:shadow-xl hover:-translate-y-2 bg-white"
                   }`}
                 >
                   <div className="w-16 h-16 sm:w-10 sm:h-10  lg:w-16 lg:h-16">
@@ -113,7 +113,7 @@ export default function AboutMe() {
                     src={item.img} alt={item.title}/>
                   </div>
                   <h4
-                    className={`text-center text-sm lg:text-xl  font-recoletaBold transition-colors duration-500 group-hover:text-white text-[#47626D] mt-3 ${
+                    className={`text-center text-sm lg:text-xl  font-bold transition-colors duration-500 group-hover:text-white text-[#475569] mt-3 ${
                       selectedIndex === index ? "text-white" : ""
                     }`}
                   >
@@ -121,7 +121,7 @@ export default function AboutMe() {
                   </h4>
 
                   <div
-                    className={`absolute -top-2 -right-2 transform transition-all duration-500 opacity-0 group-hover:opacity-100 shadow-xl w-12 h-12 rounded-lg bg-[#476571] flex justify-center items-center font-bold text-white font-recoletaBold text-xl  ${
+                    className={`absolute -top-2 -right-2 transform transition-all duration-500 opacity-0 group-hover:opacity-100 shadow-xl w-12 h-12 rounded-lg bg-[#1E3A8A] flex justify-center items-center font-bold text-white font-bold text-xl  ${
                       selectedIndex === index
                         ? "opacity-100 rotate-12"
                         : "group-hover:rotate-12"
@@ -141,16 +141,16 @@ export default function AboutMe() {
                 }`}
               >
                 <p
-                  className={`text-[#47626D] ${hind.className}  text-lg sm:text-base lg:text-xl transition duration-500 transform`}
+                  className={`text-[#475569] ${sans.className}  text-lg sm:text-base lg:text-xl transition duration-500 transform`}
                 >
                   What I do in
                 </p>
-                <h2 className="font-recoletaBold text-[#47626D] text-3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform">
+                <h2 className="font-bold text-[#475569] text-3xl sm:text-2xl md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform">
                   {mapData?.title}
                 </h2>
 
                 <ul
-                  className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform `}
+                  className={`${sans.className} font-[300] list-disc text-[#475569] ml-8 lg:ml-10 text-base lg:text-lg transition duration-500 transform `}
                 >
                   {mapData?.array?.map((obj) => (
                     <li key={obj} className="mb-2">{obj}</li>
@@ -163,7 +163,7 @@ export default function AboutMe() {
                 }`}
               >
                 <div className="card-inner">
-                  <div className="rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-recoletaBlack text-white bg-[#47626D]  p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve">
+                  <div className="rounded-2xl cursor-pointer  text-7xl  xl:text-9xl font-extrabold text-white bg-[#0B1D3A]  p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48  transform transition duration-500 transform-preserve -rotate-6 transform-preserve">
                     <span className="text-2xl xl:text-6xl mr-2 sm:mr-3">*</span>
                     {mapData.count}
                   </div>
@@ -173,7 +173,7 @@ export default function AboutMe() {
               <div className="absolute right-10  -bottom-5 flex">
                 <a
                   onClick={HandlePrev}
-                  className="w-12 h-12 rounded-xl mr-1 transform transition duration-500  cursor-pointer  hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]"
+                  className="w-12 h-12 rounded-xl mr-1 transform transition duration-500  cursor-pointer  hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#0B1D3A]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +193,7 @@ export default function AboutMe() {
                 </a>
                 <a
                   onClick={HandleNext}
-                  className="w-12 h-12 rounded-xl mr-1 transform transition duration-500  cursor-pointer  hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#47626D]"
+                  className="w-12 h-12 rounded-xl mr-1 transform transition duration-500  cursor-pointer  hover:-translate-y-1 hover:shadow-lg -rotate flex justify-center items-center bg-[#0B1D3A]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

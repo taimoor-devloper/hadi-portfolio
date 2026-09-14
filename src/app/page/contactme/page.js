@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaLocationDot, FaBehance, FaLinkedin } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
-import { hind } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import { SiteConfig, DataArray } from "@/app/data";
 
 const projectTypes = [
@@ -45,14 +45,14 @@ const emptyState = {
 };
 
 const inputClass =
-  "w-full px-4 py-3 rounded-lg bg-[#F5FAFC] border border-[#D5ECF6] text-[#223740] placeholder:text-[#9FB3BB] outline-none transition focus:border-[#48AFDE] focus:ring-4 focus:ring-[#48AFDE]/20";
+  "w-full px-4 py-3 rounded-lg bg-[#F6F8FE] border border-[#DBE4F7] text-[#0B1D3A] placeholder:text-[#94A3B8] outline-none transition focus:border-[#1D4ED8] focus:ring-4 focus:ring-[#1D4ED8]/20";
 
 function Field({ label, htmlFor, optional, children }) {
   return (
     <div className="flex flex-col gap-2 flex-1">
-      <label htmlFor={htmlFor} className="text-sm font-semibold text-[#223740]">
+      <label htmlFor={htmlFor} className="text-sm font-semibold text-[#0B1D3A]">
         {label}
-        {optional && <span className="font-normal text-[#9FB3BB]"> (optional)</span>}
+        {optional && <span className="font-normal text-[#94A3B8]"> (optional)</span>}
       </label>
       {children}
     </div>
@@ -113,9 +113,9 @@ export default function Page() {
   const covers = DataArray.slice(0, 6);
 
   return (
-    <div className={hind.className}>
+    <div className={sans.className}>
       {/* hero */}
-      <section className="relative overflow-hidden bg-[#223740] pt-28 lg:pt-40 pb-32 px-5">
+      <section className="relative overflow-hidden bg-[#0B1D3A] pt-28 lg:pt-40 pb-32 px-5">
         <div
           aria-hidden="true"
           className="absolute top-0 right-0 hidden lg:grid grid-cols-3 gap-4 w-[45%] rotate-6 translate-x-24 -translate-y-10 opacity-25"
@@ -131,10 +131,10 @@ export default function Page() {
             <span className="w-2 h-2 rounded-full bg-[#4ADE80]"></span>
             Available for new projects
           </span>
-          <h1 className="font-recoletaBold text-5xl md:text-6xl text-white mt-6">
-            Let's work <span className="text-[#48AFDE]">together</span>
+          <h1 className="font-bold text-5xl md:text-6xl text-white mt-6">
+            Let's work <span className="text-[#60A5FA]">together</span>
           </h1>
-          <p className="text-[#C9DCE3] text-lg md:text-xl font-[300] max-w-xl mt-5 leading-8">
+          <p className="text-[#C3D0EA] text-lg md:text-xl font-[300] max-w-xl mt-5 leading-8">
             Need a {SiteConfig.role} for a mobile app, dashboard or management
             system? Send a message and let's schedule a short meeting.
           </p>
@@ -147,24 +147,24 @@ export default function Page() {
           <div
             id="contact"
             className="min-w-0 lg:col-span-3 lg:order-2 bg-white rounded-2xl p-6 sm:p-10 scroll-mt-28"
-            style={{ boxShadow: "rgba(72, 175, 222, 0.35) -10px 25px 50px 0px" }}
+            style={{ boxShadow: "0 24px 48px -16px rgba(11, 29, 58, 0.25)" }}
           >
-            <h2 className="text-2xl sm:text-3xl text-[#223740]">Request a meeting</h2>
-            <p className="text-[#47626D] font-[300] mt-2">
+            <h2 className="text-2xl sm:text-3xl text-[#0B1D3A]">Request a meeting</h2>
+            <p className="text-[#475569] font-[300] mt-2">
               Share a few details and I'll get back to you.
             </p>
 
             {status.type === "success" ? (
-              <div role="status" className="mt-8 rounded-xl bg-[#EEF7FB] p-8 text-center">
-                <div className="mx-auto w-14 h-14 rounded-full bg-[#48AFDE] text-white flex items-center justify-center text-2xl">
+              <div role="status" className="mt-8 rounded-xl bg-[#F1F5FD] p-8 text-center">
+                <div className="mx-auto w-14 h-14 rounded-full bg-[#1D4ED8] text-white flex items-center justify-center text-2xl">
                   ✓
                 </div>
-                <p className="text-xl text-[#223740] font-semibold mt-4">Message sent</p>
-                <p className="text-[#47626D] mt-2">{status.message}</p>
+                <p className="text-xl text-[#0B1D3A] font-semibold mt-4">Message sent</p>
+                <p className="text-[#475569] mt-2">{status.message}</p>
                 <button
                   type="button"
                   onClick={() => setStatus({ type: "idle", message: "" })}
-                  className="mt-6 text-[#48AFDE] font-semibold underline"
+                  className="mt-6 text-[#1D4ED8] font-semibold underline"
                 >
                   Send another message
                 </button>
@@ -181,7 +181,7 @@ export default function Page() {
                 </div>
 
                 <fieldset>
-                  <legend className="text-sm font-semibold text-[#223740] mb-2">
+                  <legend className="text-sm font-semibold text-[#0B1D3A] mb-2">
                     What do you need designed?
                   </legend>
                   <div className="flex flex-wrap gap-2">
@@ -190,10 +190,10 @@ export default function Page() {
                       return (
                         <label
                           key={type}
-                          className={`cursor-pointer rounded-full border px-4 py-2 text-sm transition-colors focus-within:ring-4 focus-within:ring-[#48AFDE]/30 ${
+                          className={`cursor-pointer rounded-full border px-4 py-2 text-sm transition-colors focus-within:ring-4 focus-within:ring-[#1D4ED8]/30 ${
                             active
-                              ? "bg-[#223740] border-[#223740] text-white"
-                              : "bg-white border-[#D5ECF6] text-[#47626D] hover:border-[#48AFDE]"
+                              ? "bg-[#0B1D3A] border-[#0B1D3A] text-white"
+                              : "bg-white border-[#DBE4F7] text-[#475569] hover:border-[#1D4ED8]"
                           }`}
                         >
                           <input
@@ -224,7 +224,7 @@ export default function Page() {
                   <p
                     role="alert"
                     className={`rounded-lg px-4 py-3 text-sm ${
-                      status.type === "error" ? "bg-red-50 text-red-700" : "bg-[#EEF7FB] text-[#223740]"
+                      status.type === "error" ? "bg-red-50 text-red-700" : "bg-[#F1F5FD] text-[#0B1D3A]"
                     }`}
                   >
                     {status.message}
@@ -234,7 +234,7 @@ export default function Page() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-[#48AFDE] hover:bg-[#223740] disabled:opacity-60 transition-colors duration-300 text-white font-bold uppercase tracking-wide px-8 py-4 rounded-lg flex items-center justify-center gap-3"
+                  className="bg-[#1D4ED8] hover:bg-[#0B1D3A] disabled:opacity-60 transition-colors duration-300 text-white font-bold uppercase tracking-wide px-8 py-4 rounded-lg flex items-center justify-center gap-3"
                 >
                   {loading && (
                     <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin"></span>
@@ -248,32 +248,32 @@ export default function Page() {
           {/* how it works + channels */}
           <aside className="min-w-0 lg:col-span-2 lg:order-1 lg:pt-28 flex flex-col gap-8">
             <div>
-              <h2 className="text-2xl text-[#223740]">How it works</h2>
+              <h2 className="text-2xl text-[#0B1D3A]">How it works</h2>
               <ol className="mt-6 space-y-6">
                 {steps.map((step, index) => (
                   <li key={step.title} className="flex gap-4">
-                    <span className="shrink-0 w-10 h-10 rounded-lg bg-[#48AFDE] text-white font-bold flex items-center justify-center -rotate-6">
+                    <span className="shrink-0 w-10 h-10 rounded-lg bg-[#1D4ED8] text-white font-bold flex items-center justify-center -rotate-6">
                       {index + 1}
                     </span>
                     <div>
-                      <p className="font-semibold text-[#223740]">{step.title}</p>
-                      <p className="text-[#47626D] font-[300] text-sm mt-1 leading-6">{step.text}</p>
+                      <p className="font-semibold text-[#0B1D3A]">{step.title}</p>
+                      <p className="text-[#475569] font-[300] text-sm mt-1 leading-6">{step.text}</p>
                     </div>
                   </li>
                 ))}
               </ol>
             </div>
 
-            <ul className="rounded-2xl border border-[#E0F3FB] divide-y divide-[#E0F3FB]">
+            <ul className="rounded-2xl border border-[#E3EAF8] divide-y divide-[#E3EAF8]">
               {channels.map(({ icon: Icon, label, value, href }) => {
                 const content = (
                   <>
-                    <span className="shrink-0 w-10 h-10 rounded-lg bg-[#EEF7FB] text-[#48AFDE] flex items-center justify-center">
+                    <span className="shrink-0 w-10 h-10 rounded-lg bg-[#F1F5FD] text-[#1D4ED8] flex items-center justify-center">
                       <Icon size={20} />
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-xs uppercase tracking-wider text-[#9FB3BB]">{label}</span>
-                      <span className="block text-[#223740] truncate">{value}</span>
+                      <span className="block text-xs uppercase tracking-wider text-[#94A3B8]">{label}</span>
+                      <span className="block text-[#0B1D3A] truncate">{value}</span>
                     </span>
                   </>
                 );
@@ -284,7 +284,7 @@ export default function Page() {
                         href={href}
                         target={href.startsWith("mailto") ? undefined : "_blank"}
                         rel="noopener noreferrer"
-                        className="flex items-center gap-4 p-4 hover:bg-[#F5FAFC] transition-colors"
+                        className="flex items-center gap-4 p-4 hover:bg-[#F6F8FE] transition-colors"
                       >
                         {content}
                       </a>

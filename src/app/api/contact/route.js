@@ -59,8 +59,8 @@ export async function POST(request) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: Arial, sans-serif; }
-    .email-container { max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border: 2px solid #48AEDD; border-radius: 10px; }
-    .title { font-size: 20px; line-height: 1.5; margin-bottom: 10px; border-radius: 50px 20px; background-color: #48AEDD; color: white; padding: 5px; text-align: center; font-weight: 900; }
+    .email-container { max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border: 2px solid #1D4ED8; border-radius: 10px; }
+    .title { font-size: 20px; line-height: 1.5; margin-bottom: 10px; border-radius: 50px 20px; background-color: #1D4ED8; color: white; padding: 5px; text-align: center; font-weight: 900; }
     ul { list-style-type: none; padding: 0; }
     li { margin-bottom: 8px; }
   </style>

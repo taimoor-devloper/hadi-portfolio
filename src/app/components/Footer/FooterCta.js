@@ -14,7 +14,7 @@ export default function FooterCta() {
   return (
     <div className="bg-white pt-10 lg:pt-16 px-5">
       <div
-        className="max-w-[1140px] bg-[#48AFDE] rounded-2xl px-6 sm:px-[64px] py-12 sm:py-[64px] m-auto translate-y-[70px]"
+        className="max-w-[1140px] bg-[#1D4ED8] rounded-2xl px-6 sm:px-[64px] py-12 sm:py-[64px] m-auto translate-y-[70px]"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="min-w-0 lg:col-span-8">
@@ -30,7 +30,7 @@ export default function FooterCta() {
           <div className="min-w-0 lg:col-span-4 flex flex-col sm:flex-row justify-center lg:justify-end items-center gap-4">
             <Link
               href="/page/contactme"
-              className="w-full sm:w-auto font-sans px-8 py-4 bg-[#223740] hover:bg-white hover:text-[#223740] transition-colors duration-300 rounded-xl text-white font-medium text-lg text-center"
+              className="w-full sm:w-auto font-sans px-8 py-4 bg-[#0B1D3A] hover:bg-white hover:text-[#0B1D3A] transition-colors duration-300 rounded-xl text-white font-medium text-lg text-center"
             >
               Hire Me
             </Link>
@@ -38,7 +38,7 @@ export default function FooterCta() {
               target="_blank"
               rel="noopener noreferrer"
               href={SiteConfig.behance}
-              className="w-full sm:w-auto font-sans px-8 py-4 border-2 border-white hover:bg-white hover:text-[#48AFDE] transition-colors duration-300 rounded-xl text-white font-medium text-lg text-center"
+              className="w-full sm:w-auto font-sans px-8 py-4 border-2 border-white hover:bg-white hover:text-[#1D4ED8] transition-colors duration-300 rounded-xl text-white font-medium text-lg text-center"
             >
               Behance
             </a>

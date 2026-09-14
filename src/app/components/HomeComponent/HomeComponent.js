@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { hind } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import Image from "next/image";
 import { SiteConfig, PastBrands, CurrentBrands, DataArray } from "@/app/data";
 
@@ -34,11 +34,10 @@ const HomeComponent = () => {
 
   const brands = [...PastBrands, ...CurrentBrands];
   const [featured, ...others] = DataArray.slice(0, 3);
-  const screenCount = DataArray.reduce((sum, p) => sum + p.images.gallery.length, 0);
   const stats = [
     { value: SiteConfig.yearsExperience, label: "Years experience" },
-    { value: DataArray.length, label: "Case studies" },
-    { value: `${Math.floor(screenCount / 10) * 10}+`, label: "Screens designed" },
+    { value: SiteConfig.projectsCount, label: "Design projects" },
+    { value: SiteConfig.screensCount, label: "Screens designed" },
   ];
 
   return (
@@ -46,7 +45,7 @@ const HomeComponent = () => {
       <div
         id="home"
         style={{
-          backgroundImage: "linear-gradient(to right,white 65%, #48AFDE 35%)",
+          backgroundImage: "linear-gradient(to right,white 65%, #1D4ED8 35%)",
           minHeight: "500px",
           maxHeight: "1200px",
           height: "100%",
@@ -59,27 +58,27 @@ const HomeComponent = () => {
               <div className="container m-auto">
                 <div className="lg:pl-24 sm:pl-10 px-5 md:px-0 md:py-0 py-20 md:text-start text-center">
                   <p
-                    className={`text-[#47AEDE]   text-3xl md:text-base lg:text-2xl ${hind.className}`}
+                    className={`text-[#1D4ED8]   text-3xl md:text-base lg:text-2xl ${sans.className}`}
                   >
                     Hi There!
                   </p>
-                  <h1 className="text-[#223740] font-recoletaBlack text-6xl md:text-5xl lg:text-6xl xl:text-7xl mt-5 md:mt-3">
+                  <h1 className="text-[#0B1D3A] font-extrabold text-6xl md:text-5xl lg:text-6xl xl:text-7xl mt-5 md:mt-3">
                     I'm {SiteConfig.shortName}
                   </h1>
                   <h2
-                    className={`text-[#223740] py-2 font-bold uppercase text-md md:text-xs lg:text-xl ${hind.className}`}
+                    className={`text-[#0B1D3A] py-2 font-bold uppercase text-md md:text-xs lg:text-xl ${sans.className}`}
                   >
                     {SiteConfig.role}
                   </h2>
                   <p
-                    className={`text-[#47626D] font-[300] text-base lg:text-lg mt-2 max-w-md mx-auto md:mx-0 ${hind.className}`}
+                    className={`text-[#475569] font-[300] text-base lg:text-lg mt-2 max-w-md mx-auto md:mx-0 ${sans.className}`}
                   >
                     {SiteConfig.intro}
                   </p>
 
                   <a
                     href="/#portfolio"
-                    className={`inline-block bg-[#48AFDE] transition-all duration-300 ease-in-out rounded-lg  text-white hover:bg-[#223740] hover:shadow-lg transform hover:-translate-y-1 py-3 md:py-2 lg:py-3 px-5 lg:px-8 md:text-xs lg:text-base font-bold uppercase mt-8 md:mt-5 xl:mt-10 ${hind.className}`}
+                    className={`inline-block bg-[#1D4ED8] transition-all duration-300 ease-in-out rounded-lg  text-white hover:bg-[#0B1D3A] hover:shadow-lg transform hover:-translate-y-1 py-3 md:py-2 lg:py-3 px-5 lg:px-8 md:text-xs lg:text-base font-bold uppercase mt-8 md:mt-5 xl:mt-10 ${sans.className}`}
                   >
                     Projects
                   </a>
@@ -87,19 +86,19 @@ const HomeComponent = () => {
                     href={SiteConfig.behance}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`ml-5 lg:ml-10 inline-block bg-[#223740] transition-all duration-300 ease-in-out rounded-lg  text-white hover:bg-[#48AFDE] hover:shadow-lg transform hover:-translate-y-1 py-3 md:py-2 lg:py-3 px-5 lg:px-8 md:text-xs lg:text-base font-bold uppercase mt-8 md:mt-5 xl:mt-10 ${hind.className}`}
+                    className={`ml-5 lg:ml-10 inline-block bg-[#0B1D3A] transition-all duration-300 ease-in-out rounded-lg  text-white hover:bg-[#1D4ED8] hover:shadow-lg transform hover:-translate-y-1 py-3 md:py-2 lg:py-3 px-5 lg:px-8 md:text-xs lg:text-base font-bold uppercase mt-8 md:mt-5 xl:mt-10 ${sans.className}`}
                   >
                     Behance
                   </a>
 
                   <dl
-                    className={`mt-10 grid grid-cols-3 gap-4 max-w-md mx-auto md:mx-0 ${hind.className}`}
+                    className={`mt-10 grid grid-cols-3 gap-4 max-w-md mx-auto md:mx-0 ${sans.className}`}
                   >
                     {stats.map((stat) => (
-                      <div key={stat.label} className="border-l-2 border-[#48AFDE] pl-3 text-left">
+                      <div key={stat.label} className="border-l-2 border-[#1D4ED8] pl-3 text-left">
                         <dt className="sr-only">{stat.label}</dt>
-                        <dd className="text-2xl lg:text-3xl font-bold text-[#223740]">{stat.value}</dd>
-                        <dd className="text-xs text-[#47626D] leading-4">{stat.label}</dd>
+                        <dd className="text-2xl lg:text-3xl font-bold text-[#0B1D3A]">{stat.value}</dd>
+                        <dd className="text-xs text-[#475569] leading-4">{stat.label}</dd>
                       </div>
                     ))}
                   </dl>
@@ -107,7 +106,7 @@ const HomeComponent = () => {
               </div>
             </div>
             {SiteConfig.photo ? (
-            <div className="md:col-span-7 col-span-12 md:pt-[130px] pt-[50px] md:bg-transparent bg-[#d9eef7]">
+            <div className="md:col-span-7 col-span-12 md:pt-[130px] pt-[50px] md:bg-transparent bg-[#E8EEFB]">
               <div className="m-auto container" style={{ width: "100%", height: "100%" }}>
                 <Image
                   alt={`${SiteConfig.name} — ${SiteConfig.role}`}
@@ -121,7 +120,7 @@ const HomeComponent = () => {
               </div>
             </div>
             ) : (
-            <div className="md:col-span-7 col-span-12 md:pt-[130px] pt-[50px] pb-[120px] md:bg-transparent bg-[#d9eef7]">
+            <div className="md:col-span-7 col-span-12 md:pt-[130px] pt-[50px] pb-[120px] md:bg-transparent bg-[#E8EEFB]">
               <div className="relative m-auto max-w-[640px] px-5">
                 <Image
                   className="rounded-2xl w-full h-auto"
@@ -130,7 +129,7 @@ const HomeComponent = () => {
                   width={808}
                   height={632}
                   priority
-                  style={{ boxShadow: "#223740 -10px 25px 50px -10px" }}
+                  style={{ boxShadow: "0 24px 48px -16px rgba(11, 29, 58, 0.25)" }}
                 />
                 <div className="hidden sm:flex gap-4 absolute -bottom-16 right-0 w-[60%]">
                   {others.map((item) => (
@@ -141,7 +140,7 @@ const HomeComponent = () => {
                       src={item.images.cover.src}
                       width={808}
                       height={632}
-                      style={{ boxShadow: "#223740 -5px 15px 30px -10px" }}
+                      style={{ boxShadow: "0 12px 32px -12px rgba(11, 29, 58, 0.18)" }}
                     />
                   ))}
                 </div>
@@ -155,11 +154,11 @@ const HomeComponent = () => {
               <div
                 className="relative max-w-sm bottom-[70px] md:max-w-xl lg:max-w-5xl xl:max-w-6xl lg:px-14 px-5 overflow-hidden mx-auto bg-white rounded-2xl z-20 "
                 style={{
-                  boxShadow: "#48AFDE -10px 25px 50px 10px",
+                  boxShadow: "0 24px 48px -16px rgba(11, 29, 58, 0.25)",
                 }}
               >
                 <p
-                  className={`text-center text-[#47626D] text-xs uppercase tracking-widest pt-6 ${hind.className}`}
+                  className={`text-center text-[#475569] text-xs uppercase tracking-widest pt-6 ${sans.className}`}
                 >
                   Brands I've designed for
                 </p>
@@ -167,7 +166,7 @@ const HomeComponent = () => {
                   <Slider {...settings}>
                     {brands.map((brand) => (
                       <div key={brand}>
-                        <p className="text-center text-base lg:text-xl font-bold text-[#223740] opacity-40 hover:opacity-100 transition-opacity duration-300 truncate px-3">
+                        <p className="text-center text-base lg:text-xl font-bold text-[#0B1D3A] opacity-40 hover:opacity-100 transition-opacity duration-300 truncate px-3">
                           {brand}
                         </p>
                       </div>

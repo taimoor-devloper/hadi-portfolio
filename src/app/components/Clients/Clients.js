@@ -1,23 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { hind } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import { PastBrands, CurrentBrands, SiteConfig } from "@/app/data";
 
 function BrandCard({ name, badge }) {
   return (
     <div
       className="group relative bg-white rounded-2xl px-3 py-5 sm:px-6 sm:py-8 flex flex-col items-center justify-center text-center"
-      style={{ boxShadow: "#48AFDE -5px 10px 20px 0px" }}
+      style={{ boxShadow: "0 12px 32px -12px rgba(11, 29, 58, 0.18)" }}
     >
-      <div className="w-12 h-12 rounded-xl bg-[#48AFDE] text-white font-bold text-xl flex items-center justify-center mb-4 -rotate-6">
+      <div className="w-12 h-12 rounded-xl bg-[#1D4ED8] text-white font-bold text-xl flex items-center justify-center mb-4 -rotate-6">
         {name.charAt(0)}
       </div>
-      <p className="text-base sm:text-xl font-bold text-[#223740]">
+      <p className="text-base sm:text-xl font-bold text-[#0B1D3A]">
         {name}
       </p>
       {badge && (
         <span
-          className={`mt-3 text-[10px] sm:text-xs uppercase tracking-wide bg-[#EEF7FB] text-[#47626D] px-3 py-1 rounded-full ${hind.className}`}
+          className={`mt-3 text-[10px] sm:text-xs uppercase tracking-wide bg-[#F1F5FD] text-[#475569] px-3 py-1 rounded-full ${sans.className}`}
         >
           {badge}
         </span>
@@ -28,14 +28,14 @@ function BrandCard({ name, badge }) {
 
 export default function Clients() {
   return (
-    <div id="clients" className="bg-[#EEF7FB] py-16 sm:py-20 px-5">
+    <div id="clients" className="bg-[#F1F5FD] py-16 sm:py-20 px-5">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center">
-          <h2 className="font-extrabold text-4xl md:text-5xl mb-6 text-[#48AEDD]">
+          <h2 className="font-extrabold text-4xl md:text-5xl mb-6 text-[#1D4ED8]">
             Brands I've Worked With
           </h2>
           <p
-            className={`max-w-2xl mx-auto mb-12 text-[#47626D] font-[300] text-lg ${hind.className}`}
+            className={`max-w-2xl mx-auto mb-12 text-[#475569] font-[300] text-lg ${sans.className}`}
           >
             I've worked on UI/UX for brands including TCS Sentiments, Bluebird
             Art Paint, SOGO Store, Autojin Parts, MTJ, Dhoraji and Wheelrack
@@ -49,11 +49,11 @@ export default function Clients() {
         </div>
 
         <div className="text-center mt-20">
-          <h3 className="font-extrabold text-3xl md:text-4xl mb-6 text-[#223740]">
+          <h3 className="font-extrabold text-3xl md:text-4xl mb-6 text-[#0B1D3A]">
             Currently Building
           </h3>
           <p
-            className={`max-w-2xl mx-auto mb-12 text-[#47626D] font-[300] text-lg ${hind.className}`}
+            className={`max-w-2xl mx-auto mb-12 text-[#475569] font-[300] text-lg ${sans.className}`}
           >
             I'm currently working on management systems for US-based brands
             such as Wilbarts, BYOT Auto Parts, and Nivago Pick-A-Part.
@@ -66,11 +66,11 @@ export default function Clients() {
         </div>
 
         <div
-          className="mt-16 bg-[#223740] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-8"
-          style={{ boxShadow: "#48AFDE -10px 25px 50px -10px" }}
+          className="mt-16 bg-[#0B1D3A] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-8"
+          style={{ boxShadow: "0 24px 48px -16px rgba(11, 29, 58, 0.25)" }}
         >
           <p
-            className={`flex-1 text-white font-[300] text-lg text-center lg:text-left ${hind.className}`}
+            className={`flex-1 text-white font-[300] text-lg text-center lg:text-left ${sans.className}`}
           >
             Due to company policies, I'm unable to share links to some of my
             current projects. However, I'd be happy to schedule a short meeting
@@ -80,7 +80,7 @@ export default function Clients() {
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <Link
               href="/page/contactme"
-              className={`bg-[#48AFDE] hover:bg-white hover:text-[#223740] transition-colors duration-300 text-white font-bold uppercase px-8 py-3 rounded-lg text-center ${hind.className}`}
+              className={`bg-[#1D4ED8] hover:bg-[#2563EB] transition-colors duration-300 text-white font-bold uppercase px-8 py-3 rounded-lg text-center ${sans.className}`}
             >
               Schedule a Meeting
             </Link>
@@ -88,7 +88,7 @@ export default function Clients() {
               href={SiteConfig.behance}
               target="_blank"
               rel="noopener noreferrer"
-              className={`border-2 border-[#48AFDE] text-[#48AFDE] hover:bg-[#48AFDE] hover:text-white transition-colors duration-300 font-bold uppercase px-8 py-3 rounded-lg text-center ${hind.className}`}
+              className={`border-2 border-[#60A5FA] text-[#60A5FA] hover:bg-[#60A5FA] hover:text-[#0B1D3A] transition-colors duration-300 font-bold uppercase px-8 py-3 rounded-lg text-center ${sans.className}`}
             >
               View Behance
             </a>

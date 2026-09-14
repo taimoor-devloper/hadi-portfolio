@@ -1,26 +1,8 @@
 import "./globals.css";
-import localFont from "next/font/local";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { SiteConfig } from "./data";
-
-const poppins = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Recoleta-Black.ttf",
-      weight: "400",
-    },
-    {
-      path: "../../public/fonts/Recoleta-Medium.ttf",
-      weight: "300",
-    },
-    {
-      path: "../../public/fonts/Recoleta-Light.ttf",
-      weight: "200",
-    },
-  ],
-  variable: "--font-Recoleta-Black",
-});
+import { sans } from "./fonts";
 
 export const metadata = {
   title: `${SiteConfig.name} | ${SiteConfig.role}`,
@@ -29,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+    <html lang="en" className={sans.variable}>
+      <body className={`${sans.className} antialiased`}>
         <Header />
         {children}
         <Footer />

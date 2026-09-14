@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import SmartLink from "@/app/components/SmartLink/SmartLink";
 import { SiteConfig, NavLinks } from "@/app/data";
 
 export default function DiagonalDrawer({
@@ -11,7 +11,7 @@ export default function DiagonalDrawer({
   return (
     <React.Fragment>
       <div className="relative">
-        <div className="z-50 top-0 cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#48AFDE] flex justify-center items-center rounded-br-3xl">
+        <div className="z-50 top-0 cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#1D4ED8] flex justify-center items-center rounded-br-3xl">
           <button
             type="button"
             aria-label="Close menu"
@@ -54,13 +54,13 @@ export default function DiagonalDrawer({
       </div>
       <header className="fixed w-full transition-all duration-500 z-40 top-0">
         <div className="relative">
-          <div className="z-20 absolute bg-[#223740] bg-opacity-95 w-full h-screen top-0 flex flex-col items-center justify-center">
-            <nav className="text-white font-recoletaBold text-center text-4xl 2xl:text-6xl uppercase">
+          <div className="z-20 absolute bg-[#0B1D3A] bg-opacity-95 w-full h-screen top-0 flex flex-col items-center justify-center">
+            <nav className="text-white font-bold text-center text-4xl 2xl:text-6xl uppercase">
               <ul className="flex flex-col">
                 {NavLinks.map((link, index) => (
                   <li key={link.href} className="group my-4 2xl:my-6 relative">
                     <div className="inline-block relative">
-                      <Link
+                      <SmartLink
                         href={link.href}
                         onClick={() => {
                           setSelectedIndex1(index);
@@ -68,9 +68,9 @@ export default function DiagonalDrawer({
                         }}
                       >
                         {link.label}
-                      </Link>
+                      </SmartLink>
                       <div
-                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 group-hover:-rotate-6 group-hover:opacity-100 bg-[#48AFDE] rounded-xl -z-10 ${
+                        className={`absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 group-hover:-rotate-6 group-hover:opacity-100 bg-[#1D4ED8] rounded-xl -z-10 ${
                           selectedIndex1 === index
                             ? "-rotate-6 opacity-100"
                             : "rotate-0 opacity-0"
@@ -82,7 +82,7 @@ export default function DiagonalDrawer({
               </ul>
             </nav>
             <section className="mt-14 text-center relative">
-              <h3 className="font-bold text-[#48AFDE] text-2xl uppercase mb-5">
+              <h3 className="font-bold text-[#60A5FA] text-2xl uppercase mb-5">
                 Connect With Me
               </h3>
               <div className="flex flex-wrap justify-center gap-4 px-5">
@@ -98,7 +98,7 @@ export default function DiagonalDrawer({
                     href={link.href}
                     className="inline-flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-300 text-xl"
                   >
-                    <span className="w-10 h-10 rounded-lg bg-[#48AFDE] text-white font-bold flex items-center justify-center">
+                    <span className="w-10 h-10 rounded-lg bg-[#1D4ED8] text-white font-bold flex items-center justify-center">
                       {link.label}
                     </span>
                     {link.title}

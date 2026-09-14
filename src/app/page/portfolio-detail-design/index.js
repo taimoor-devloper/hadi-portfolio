@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { hind } from "@/app/fonts";
+import { sans } from "@/app/fonts";
 import Image from "next/image";
 import { SiteConfig } from "@/app/data";
 
@@ -37,17 +37,17 @@ export default function Index({ id, data, DataArray }) {
         />
         <div className="overlay inset-0 h-full"></div>
         <div className="relative z-10 h-full container m-auto px-5 sm:px-16 flex flex-col justify-center">
-          <p className={`text-[#48AFDE] font-bold uppercase tracking-widest text-sm ${hind.className}`}>
+          <p className={`text-[#1D4ED8] font-bold uppercase tracking-widest text-sm ${sans.className}`}>
             {data.category} · Case Study
           </p>
-          <h1 className="text-[#223740] font-recoletaBold text-3xl md:text-5xl max-w-3xl mt-3">
+          <h1 className="text-[#0B1D3A] font-bold text-3xl md:text-5xl max-w-3xl mt-3">
             {data.title}
           </h1>
           <div className="flex flex-wrap gap-2 mt-5">
             {data.tags.map((tag) => (
               <span
                 key={tag}
-                className={`text-sm bg-white/80 text-[#47626D] px-3 py-1 rounded-full ${hind.className}`}
+                className={`text-sm bg-white/80 text-[#475569] px-3 py-1 rounded-full ${sans.className}`}
               >
                 {tag}
               </span>
@@ -57,17 +57,17 @@ export default function Index({ id, data, DataArray }) {
       </div>
 
       {/* overview */}
-      <div className="bg-[#EEF7FB] px-5">
+      <div className="bg-[#F1F5FD] px-5">
         <div className="container m-auto max-w-6xl py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           <div className="min-w-0 lg:col-span-8">
-            <h2 className="text-3xl text-[#48AFDE] mb-5">Project Overview</h2>
-            <p className={`text-lg text-[#223740] font-[300] leading-8 ${hind.className}`}>
+            <h2 className="text-3xl text-[#1D4ED8] mb-5">Project Overview</h2>
+            <p className={`text-lg text-[#0B1D3A] font-[300] leading-8 ${sans.className}`}>
               {data.summary}
             </p>
             {data.colors && (
               <div className="flex items-center gap-3 mt-6">
                 {data.colors.map((color) => (
-                  <span key={color} className={`flex items-center gap-2 text-sm text-[#47626D] ${hind.className}`}>
+                  <span key={color} className={`flex items-center gap-2 text-sm text-[#475569] ${sans.className}`}>
                     <span
                       className="w-8 h-8 rounded-lg border border-gray-200"
                       style={{ backgroundColor: color }}
@@ -81,19 +81,19 @@ export default function Index({ id, data, DataArray }) {
           <div className="min-w-0 lg:col-span-4">
             <div
               className="bg-white rounded-2xl p-6"
-              style={{ boxShadow: "#48AFDE -5px 10px 20px 0px" }}
+              style={{ boxShadow: "0 12px 32px -12px rgba(11, 29, 58, 0.18)" }}
             >
-              <dl className={`space-y-4 ${hind.className}`}>
+              <dl className={`space-y-4 ${sans.className}`}>
                 {Object.entries(facts).map(([label, value]) => (
                   <div key={label}>
-                    <dt className="text-xs uppercase tracking-wider text-[#48AFDE] font-bold">{label}</dt>
-                    <dd className="text-[#223740]">{value}</dd>
+                    <dt className="text-xs uppercase tracking-wider text-[#1D4ED8] font-bold">{label}</dt>
+                    <dd className="text-[#0B1D3A]">{value}</dd>
                   </div>
                 ))}
                 {!data.meta.Screens && (
                   <div>
-                    <dt className="text-xs uppercase tracking-wider text-[#48AFDE] font-bold">Screens Shown</dt>
-                    <dd className="text-[#223740]">{gallery.length}</dd>
+                    <dt className="text-xs uppercase tracking-wider text-[#1D4ED8] font-bold">Screens Shown</dt>
+                    <dd className="text-[#0B1D3A]">{gallery.length}</dd>
                   </div>
                 )}
               </dl>
@@ -101,7 +101,7 @@ export default function Index({ id, data, DataArray }) {
                 href={data.behance}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block text-center mt-6 bg-[#48AFDE] hover:bg-[#223740] transition-colors duration-300 text-white font-bold uppercase px-6 py-3 rounded-lg ${hind.className}`}
+                className={`block text-center mt-6 bg-[#1D4ED8] hover:bg-[#0B1D3A] transition-colors duration-300 text-white font-bold uppercase px-6 py-3 rounded-lg ${sans.className}`}
               >
                 View on Behance
               </a>
@@ -117,15 +117,15 @@ export default function Index({ id, data, DataArray }) {
             {data.sections.map((section, index) => (
               <div
                 key={section.heading}
-                className="rounded-2xl border border-[#E0F3FB] p-6 lg:p-8"
+                className="rounded-2xl border border-[#E3EAF8] p-6 lg:p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="w-9 h-9 rounded-lg bg-[#48AFDE] text-white font-bold flex items-center justify-center -rotate-6">
+                  <span className="w-9 h-9 rounded-lg bg-[#1D4ED8] text-white font-bold flex items-center justify-center -rotate-6">
                     {index + 1}
                   </span>
-                  <h3 className="text-xl text-[#223740]">{section.heading}</h3>
+                  <h3 className="text-xl text-[#0B1D3A]">{section.heading}</h3>
                 </div>
-                <ul className={`list-disc ml-5 space-y-2 text-[#47626D] font-[300] ${hind.className}`}>
+                <ul className={`list-disc ml-5 space-y-2 text-[#475569] font-[300] ${sans.className}`}>
                   {section.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -134,9 +134,9 @@ export default function Index({ id, data, DataArray }) {
             ))}
           </div>
 
-          <div className="mt-10 bg-[#223740] rounded-2xl p-8 lg:p-10 text-white">
-            <p className="text-2xl text-[#48AFDE] mb-3">Outcome</p>
-            <p className={`text-lg font-[300] leading-8 ${hind.className}`}>{data.result}</p>
+          <div className="mt-10 bg-[#0B1D3A] rounded-2xl p-8 lg:p-10 text-white">
+            <p className="text-2xl font-bold text-[#60A5FA] mb-3">Outcome</p>
+            <p className={`text-lg font-[300] leading-8 ${sans.className}`}>{data.result}</p>
           </div>
         </div>
       </div>
@@ -146,12 +146,12 @@ export default function Index({ id, data, DataArray }) {
         className="px-5 pb-20"
         style={{
           background:
-            "linear-gradient(90deg, rgba(238, 247, 251, 1) 58%, rgba(255, 255, 255, 1) 52%)",
+            "linear-gradient(90deg, rgba(241, 245, 253, 1) 58%, rgba(255, 255, 255, 1) 52%)",
         }}
       >
         <div className="container m-auto max-w-6xl pt-16">
-          <h2 className="text-3xl text-[#48AFDE] mb-2">Design Screens</h2>
-          <p className={`text-[#47626D] mb-10 ${hind.className}`}>
+          <h2 className="text-3xl text-[#1D4ED8] mb-2">Design Screens</h2>
+          <p className={`text-[#475569] mb-10 ${sans.className}`}>
             {gallery.length} screens from the project
           </p>
           <div className="space-y-8">
@@ -189,20 +189,20 @@ export default function Index({ id, data, DataArray }) {
             )}
           </div>
 
-          <div className={`mt-14 text-center ${hind.className}`}>
-            <p className="text-[#47626D] mb-4">
+          <div className={`mt-14 text-center ${sans.className}`}>
+            <p className="text-[#475569] mb-4">
               Want a walkthrough of this project or the full Figma file?
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/page/contactme"
-                className="bg-[#48AFDE] hover:bg-[#223740] transition-colors duration-300 text-white font-bold uppercase px-8 py-3 rounded-lg"
+                className="bg-[#1D4ED8] hover:bg-[#0B1D3A] transition-colors duration-300 text-white font-bold uppercase px-8 py-3 rounded-lg"
               >
                 Schedule a Meeting
               </Link>
               <a
                 href={`mailto:${SiteConfig.email}`}
-                className="border-2 border-[#48AFDE] text-[#48AFDE] hover:bg-[#48AFDE] hover:text-white transition-colors duration-300 font-bold uppercase px-8 py-3 rounded-lg"
+                className="border-2 border-[#1D4ED8] text-[#1D4ED8] hover:bg-[#1D4ED8] hover:text-white transition-colors duration-300 font-bold uppercase px-8 py-3 rounded-lg"
               >
                 Email Me
               </a>
@@ -215,10 +215,10 @@ export default function Index({ id, data, DataArray }) {
       <div className="relative flex h-48 text-white">
         <Link
           href={`/portfoliodetail/${prev}`}
-          className={`group w-1/2 flex items-center justify-center bg-cover bg-center ${hind.className}`}
+          className={`group w-1/2 flex items-center justify-center bg-cover bg-center ${sans.className}`}
           style={{ backgroundImage: `url(${DataArray[prev].images.cover.src})` }}
         >
-          <span className="flex flex-col sm:flex-row justify-center group-hover:bg-[#223740] transition-colors duration-300 bg-[#405B66] bg-opacity-90 items-center w-full h-full px-3 text-center">
+          <span className="flex flex-col sm:flex-row justify-center group-hover:bg-[#0B1D3A] transition-colors duration-300 bg-[#0B1D3A] bg-opacity-90 items-center w-full h-full px-3 text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -239,10 +239,10 @@ export default function Index({ id, data, DataArray }) {
 
         <Link
           href={`/portfoliodetail/${next}`}
-          className={`group w-1/2 flex items-center justify-center bg-cover bg-center ${hind.className}`}
+          className={`group w-1/2 flex items-center justify-center bg-cover bg-center ${sans.className}`}
           style={{ backgroundImage: `url(${DataArray[next].images.cover.src})` }}
         >
-          <span className="flex flex-col-reverse sm:flex-row justify-center group-hover:bg-[#223740] transition-colors duration-300 bg-[#405B66] bg-opacity-90 items-center w-full h-full px-3 text-center">
+          <span className="flex flex-col-reverse sm:flex-row justify-center group-hover:bg-[#0B1D3A] transition-colors duration-300 bg-[#0B1D3A] bg-opacity-90 items-center w-full h-full px-3 text-center">
             <span>
               Next Project
               <span className="block text-sm opacity-80">{DataArray[next].name}</span>
